@@ -1,0 +1,175 @@
+body {
+    background-image: url(../img/5.jpg);
+}
+
+.textos-header {
+    display: flex;
+    height: 430px;
+    width: 110%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1 {
+    font-size: 50px;
+    color: white;
+}
+
+.textos-header h3 {
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+}
+
+header,
+.alert {
+    z-index: 100;
+}
+
+.description {
+    height: 25px;
+    overflow: hidden;
+    transition: height .3s ease-in .3s;
+}
+
+.description:hover {
+    height: 80px;
+}
+
+.carrito {
+    min-height: 80vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.table__productos {
+    display: flex;
+}
+
+.table__productos>img {
+    width: 9rem;
+    object-fit: contain;
+    border-radius: 6px;
+    margin-right: 20px;
+}
+
+.table__cantidad>input {
+    width: 40px;
+    border: none;
+    outline: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.hide,
+.remove {
+    display: none;
+}
+
+
+/*contacto - formulario*/
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(103, 133, 133, 0.404);
+    padding: 40px 0;
+    border-radius: 50px;
+    height: 600px;
+    width: 60%;
+    margin: auto;
+}
+
+form .grupo {
+    position: relative;
+    margin: 45px;
+    font-size: 20px;
+    text-align: center;
+}
+
+input {
+    background: none;
+    color: #182aca;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+}
+
+input:focus {
+    outline: none;
+    color: #182aca;
+}
+
+label {
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    transition: 0.5s ease all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: #182aca;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: white;
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before {
+    width: 100%;
+}
+
+.warnings {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: rgb(175, 18, 13);
+    padding-top: 20px;
+}
+
+button {
+    background-color: rgba(34, 44, 44, 0.801);
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
